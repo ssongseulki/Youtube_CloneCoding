@@ -165,7 +165,7 @@ body > .info {
 .info .channel .subscribe {
   text-transform: uppercase;
   color: var(--red-color);
-  font-size: var(--font-medium);
+  font-size: var(--font-micro);
 }
 
 /* Up Next */
