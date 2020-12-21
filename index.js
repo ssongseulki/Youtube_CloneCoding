@@ -19,6 +19,20 @@ function downBtnClick() {
   downBtn.innerHTML = downNum + 1 ;
 };
 
+function shareBtnClick() {
+  const url = "urlCopy.html";
+  const name = "URL 복사";
+  const option = "width = 600, height = 100 , top = 100, left = 100, location = no";
+  window.open(url, name, option);
+}
+function urlCopy() {
+  const shareUrl = document.querySelector("#shareUrl");
+  shareUrl.select();
+  shareUrl.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("URL이 복사되었습니다.");
+}
+
 function saveBtnClick() { 
   alert("저장되었습니다.");
 }
