@@ -20,17 +20,15 @@ function downBtnClick() {
 };
 
 function shareBtnClick() {
-  const url = "urlCopy.html";
-  const name = "URL 복사";
-  const option = "width = 600, height = 100 , top = 100, left = 100, location = no";
-  window.open(url, name, option);
-}
-function urlCopy() {
-  const shareUrl = document.querySelector("#shareUrl");
-  shareUrl.select();
-  shareUrl.setSelectionRange(0, 99999)
-  document.execCommand("copy");
+  const urlCopy = document.createElement('input');
+  urlCopy.style.cssText = "position: absolute; z-index: -9999;";
+  urlCopy.value = window.location.href;
+  document.body.appendChild(urlCopy);
+  urlCopy.select();
+  document.execCommand('copy');
+  urlCopy.remove();
   alert("URL이 복사되었습니다.");
+  
 }
 
 function saveBtnClick() { 
